@@ -763,7 +763,23 @@ a:focus-visible,
   opacity: 0;
   transform: translateY(var(--card-offset-y)) rotate(calc(var(--card-rotation) + var(--hover-tilt, 0deg))) scale(var(--card-scale));
   transform-origin: var(--pin-offset) 8%;
-  transition: opacity 620ms ease var(--card-delay), box-shadow 260ms ease, transform 720ms cubic-bezier(0.22, 1, 0.36, 1) var(--card-delay);
+  rotate: calc((var(--scroll-progress, 0.5) - 0.5) * var(--swing-amplitude, 14deg) * var(--swing-dir, 1));
+  transition: opacity 620ms ease var(--card-delay), box-shadow 260ms ease, transform 720ms cubic-bezier(0.22, 1, 0.36, 1) var(--card-delay), rotate 420ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.paper-card--2,
+.paper-card--4 {
+  --swing-dir: -1;
+}
+
+.paper-card--3 {
+  --swing-amplitude: 18deg;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paper-card {
+    rotate: none;
+  }
 }
 
 .paper-card::after {
