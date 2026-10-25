@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import type { CSSProperties, KeyboardEvent, PointerEvent } from 'react'
+import type { CSSProperties, KeyboardEvent } from 'react'
 import { useRef } from 'react'
 import { partyConfig } from '@/lib/party-config'
 import { useScrollProgress } from './use-scroll-progress'
@@ -18,18 +18,6 @@ function PaperCard({
 }) {
   const rotation = cardRotations[index]
 
-  const handlePointerMove = (event: PointerEvent<HTMLElement>) => {
-    if (event.pointerType === 'touch') return
-
-    const bounds = event.currentTarget.getBoundingClientRect()
-    const offset = (event.clientX - bounds.left) / bounds.width - 0.5
-    event.currentTarget.style.setProperty('--hover-tilt', `${offset * 7}deg`)
-  }
-
-  const resetTilt = (event: PointerEvent<HTMLElement>) => {
-    event.currentTarget.style.setProperty('--hover-tilt', '0deg')
-  }
-
   const cardStyle = {
     '--card-rotation': `${rotation}deg`,
     '--pin-offset': pinPositions[index],
@@ -40,8 +28,6 @@ function PaperCard({
     <article
       className={`paper-card paper-card--${index + 1}`}
       style={cardStyle}
-      onPointerMove={handlePointerMove}
-      onPointerLeave={resetTilt}
       aria-labelledby={`reason-${index + 1}`}
     >
       <span className="paper-card__pin" aria-hidden="true" />

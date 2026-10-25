@@ -157,9 +157,6 @@ export function LanternTransition() {
               )
             })}
           </div>
-          <div className="lantern-transition__why-preview">
-              <span>swipe / scroll sideways</span>
-          </div>
         </div>
       </div>
     </>

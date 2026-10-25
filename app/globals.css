@@ -725,9 +725,14 @@ a:focus-visible,
   overscroll-behavior-x: contain;
   padding: 24px max(20px, calc((100vw - 1420px) / 2)) 44px;
   scroll-snap-type: x mandatory;
-  scrollbar-color: rgb(227 162 75 / 45%) transparent;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  touch-action: pan-x pan-y;
   -webkit-overflow-scrolling: touch;
+}
+
+.paper-wall::-webkit-scrollbar {
+  display: none;
 }
 
 .paper-wall__track {
@@ -770,13 +775,6 @@ a:focus-visible,
   background: var(--paper-color);
   clip-path: polygon(0 0, 100% 0, 98% 48%, 91% 75%, 80% 54%, 67% 81%, 53% 56%, 39% 82%, 24% 58%, 12% 78%, 0 52%);
   content: '';
-}
-
-.paper-card:hover,
-.paper-card:focus-within {
-  z-index: 2;
-  box-shadow: 0 26px 46px rgb(0 0 0 / 38%), 0 4px 12px rgb(0 0 0 / 22%);
-  transition-delay: 0ms;
 }
 
 .paper-card--1 {

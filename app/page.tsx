@@ -2,7 +2,7 @@ import { EventDetails } from '@/components/diwali/event-details'
 import { SiteFooter, ThemeJoke } from '@/components/diwali/closing-sections'
 import { HeroSection } from '@/components/diwali/hero-section'
 import { LanternTransition } from '@/components/diwali/lantern-transition'
-import { OpticalLens, SiteHeader } from '@/components/diwali/site-chrome'
+import { SiteHeader } from '@/components/diwali/site-chrome'
 import { StorySections } from '@/components/diwali/story-sections'
 import { WhySection } from '@/components/diwali/why-section'
 
@@ -19,7 +19,6 @@ export default function Home() {
         <EventDetails />
       </main>
       <SiteFooter />
-      <OpticalLens />
     </div>
   )
 }
