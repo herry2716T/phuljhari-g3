@@ -68,6 +68,7 @@ export function LanternTransition() {
     if (!scene || metrics.reducedMotion) return
 
     const { progress, viewportWidth, viewportHeight } = metrics
+    const isCompact = viewportWidth <= 760
     const backgroundProgress = smoothstep(clamp((progress - 0.14) / 0.86))
     const headingProgress = smoothstep(clamp((progress - 0.56) / 0.34))
     const previewExit = smoothstep(clamp((progress - 0.84) / 0.16))
@@ -105,8 +106,10 @@ export function LanternTransition() {
       const glow = (0.06 + reveal * 0.42) * (1 - exit)
 
       element.style.opacity = opacity.toFixed(4)
-      element.style.setProperty('--lantern-blur', `${blur.toFixed(2)}px`)
-      element.style.setProperty('--lantern-glow', glow.toFixed(4))
+      if (!isCompact) {
+        element.style.setProperty('--lantern-blur', `${blur.toFixed(2)}px`)
+        element.style.setProperty('--lantern-glow', glow.toFixed(4))
+      }
       element.style.transform = `translate3d(calc(-50% + ${horizontalOffset.toFixed(2)}px), calc(-50% + ${verticalOffset.toFixed(2)}px), ${depthOffset.toFixed(2)}px) rotate(${rotation.toFixed(2)}deg) scale(${scale.toFixed(4)})`
     })
   }, [])

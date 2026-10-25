@@ -180,13 +180,29 @@ function updateTarget(target: ScrollTarget, rect: DOMRect, viewportWidth: number
   target.onProgress(metrics)
 }
 
+let stableWidth = 0
+let stableHeight = 0
+
+// Mobile browsers resize innerHeight as the address bar shows/hides mid-scroll.
+// Ignoring those small height-only changes keeps scroll-linked motion from jumping.
+function getStableViewport() {
+  const width = Math.max(window.innerWidth, 1)
+  const height = Math.max(window.innerHeight, 1)
+
+  if (width !== stableWidth || !stableHeight || Math.abs(height - stableHeight) > 160) {
+    stableWidth = width
+    stableHeight = height
+  }
+
+  return { viewportWidth: stableWidth, viewportHeight: stableHeight }
+}
+
 function updateAllTargets() {
   frame = 0
 
   if (!targets.size) return
 
-  const viewportWidth = Math.max(window.innerWidth, 1)
-  const viewportHeight = Math.max(window.innerHeight, 1)
+  const { viewportWidth, viewportHeight } = getStableViewport()
   const measurements = Array.from(targets.values()).map((target) => ({
     target,
     rect: target.element.getBoundingClientRect(),

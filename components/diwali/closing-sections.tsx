@@ -26,7 +26,7 @@ export function SiteFooter() {
 
   return (
     <footer ref={ref} className="site-footer scroll-linked-section">
-      <p>ai used yugal to make ts or sm shi</p>
+      <p>hope to see you there</p>
     </footer>
   )
 }
