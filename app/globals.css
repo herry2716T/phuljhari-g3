@@ -590,7 +590,7 @@ a:focus-visible,
 
 .lantern-transition__why-background {
   z-index: 1;
-  background: linear-gradient(180deg, #100b0e 0%, #171014 54%, #24151a 100%);
+  background: linear-gradient(180deg, #100b0e 0%, #100b0e 60%, #130d11 100%);
   opacity: var(--why-background-opacity);
 }
 
@@ -667,7 +667,7 @@ a:focus-visible,
 .why-section {
   position: relative;
   padding: clamp(84px, 11vw, 154px) 0 clamp(96px, 12vw, 168px);
-  background: linear-gradient(180deg, #100b0e 0%, #171014 54%, #24151a 100%);
+  background: linear-gradient(180deg, #100b0e 0%, #130d11 18%, #1a1015 50%, #1e1319 78%, #1b1117 100%);
 }
 
 .section-heading {

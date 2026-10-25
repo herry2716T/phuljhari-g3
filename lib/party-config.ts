@@ -30,7 +30,7 @@ export type PartyConfig = {
 }
 
 export const partyConfig: PartyConfig = {
-  logoSrc: '/images/diwali-logo-background.png',
+  logoSrc: '/images/diwali-logo-transparent.png',
   heroLogoSrc: '/images/diwali-logo-transparent.png',
   soundSrc: null,
   heroBackdropSrc: '/images/hero-festive-atmosphere.png',
