@@ -171,7 +171,7 @@ a:focus-visible,
 }
 
 .brand-mark--hero {
-  width: clamp(148px, 15vw, 188px);
+  width: clamp(220px, 24vw, 320px);
   aspect-ratio: 1;
   border-radius: 0;
 }
