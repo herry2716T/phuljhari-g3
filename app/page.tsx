@@ -15,8 +15,8 @@ export default function Home() {
         <LanternTransition />
         <WhySection />
         <StorySections />
-        <EventDetails />
         <ThemeJoke />
+        <EventDetails />
       </main>
       <SiteFooter />
       <OpticalLens />

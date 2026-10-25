@@ -12,7 +12,11 @@ export function ThemeJoke() {
       className="theme-joke scroll-linked-section"
       aria-labelledby="theme-joke-heading"
     >
-      <h2 id="theme-joke-heading">boomer choice</h2>
+      <div className="theme-joke__content">
+        <p className="theme-joke__label">Theme</p>
+        <h2 id="theme-joke-heading">traditional</h2>
+        <p className="theme-joke__note">boomer choice</p>
+      </div>
     </section>
   )
 }

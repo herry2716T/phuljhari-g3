@@ -2070,6 +2070,33 @@ a:focus-visible,
   z-index: 1;
 }
 
+.theme-joke__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.theme-joke__label {
+  margin: 0;
+  color: rgb(255 173 92 / 85%);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.theme-joke__note {
+  margin: 0;
+  color: rgb(245 236 222 / 55%);
+  font-family: var(--serif);
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
 .why-section.scroll-linked-section .section-heading h2 {
   opacity: var(--scroll-opacity, 1);
   transform: translate3d(0, var(--scroll-content-y, 0px), 0) scale(var(--scroll-heading-scale, 1));
