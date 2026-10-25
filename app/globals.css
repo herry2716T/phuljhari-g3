@@ -1498,7 +1498,11 @@ a:focus-visible,
   min-height: min(66svh, 700px);
   place-items: center;
   padding: 100px 20px;
-  background: linear-gradient(180deg, #0e090c 0%, #090709 54%, #090709 100%);
+  background:
+    linear-gradient(180deg, #21131a 0%, #1a1015 14%, transparent 38%),
+    linear-gradient(0deg, #21131a 0%, #1a1015 14%, transparent 38%),
+    radial-gradient(ellipse 70% 45% at 50% 50%, rgb(255 153 63 / 7%), transparent 70%),
+    #060506;
   text-align: center;
 }
 
