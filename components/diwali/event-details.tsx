@@ -38,10 +38,10 @@ export function EventDetails() {
         </dl>
 
         <div className="event-actions">
-          <div className="map-placeholder" role="img" aria-label="Map preview placeholder. Venue to be decided.">
+          <div className="map-placeholder" role="img" aria-label="Map preview placeholder. Venue to be disclosed.">
             <span className="map-placeholder__frame" aria-hidden="true" />
             <span className="map-placeholder__label">Map preview placeholder</span>
-            <span className="map-placeholder__value">TBD — TO BE DECIDED</span>
+            <span className="map-placeholder__value">TBD — TO BE DISCLOSED</span>
           </div>
 
           <div className="event-actions__buttons">
@@ -64,7 +64,7 @@ export function EventDetails() {
               </button>
             )}
           </div>
-          <p className="event-actions__note">TBD — TO BE DECIDED</p>
+          <p className="event-actions__note">TBD — TO BE DISCLOSED</p>
         </div>
       </div>
     </section>

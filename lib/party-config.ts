@@ -84,11 +84,11 @@ export const partyConfig: PartyConfig = {
     },
   ],
   event: {
-    venueName: 'TBD — TO BE DECIDED',
-    fullAddress: 'TBD — TO BE DECIDED',
-    date: 'TBD — TO BE DECIDED',
-    time: 'TBD — TO BE DECIDED',
-    arrivalNote: 'TBD — TO BE DECIDED',
+    venueName: 'TBD — TO BE DISCLOSED',
+    fullAddress: 'TBD — TO BE DISCLOSED',
+    date: 'TBD — TO BE DISCLOSED',
+    time: 'TBD — TO BE DISCLOSED',
+    arrivalNote: 'TBD — TO BE DISCLOSED',
   },
   destinations: {
     directionsUrl: null,
