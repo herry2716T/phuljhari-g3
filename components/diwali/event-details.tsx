@@ -13,8 +13,6 @@ const detailRows = [
 
 export function EventDetails() {
   const ref = useScrollProgress<HTMLElement>()
-  const directionsUrl = partyConfig.destinations.directionsUrl
-  const whatsappRsvpUrl = partyConfig.destinations.whatsappRsvpUrl
 
   return (
     <section
@@ -36,36 +34,6 @@ export function EventDetails() {
             </div>
           ))}
         </dl>
-
-        <div className="event-actions">
-          <div className="map-placeholder" role="img" aria-label="Map preview placeholder. Venue to be disclosed.">
-            <span className="map-placeholder__frame" aria-hidden="true" />
-            <span className="map-placeholder__label">Map preview placeholder</span>
-            <span className="map-placeholder__value">TBD — TO BE DISCLOSED</span>
-          </div>
-
-          <div className="event-actions__buttons">
-            {directionsUrl ? (
-              <a className="event-button event-button--primary" href={directionsUrl} target="_blank" rel="noreferrer">
-                Get directions
-              </a>
-            ) : (
-              <button className="event-button event-button--primary" type="button" disabled>
-                Get directions
-              </button>
-            )}
-            {whatsappRsvpUrl ? (
-              <a className="event-button" href={whatsappRsvpUrl} target="_blank" rel="noreferrer">
-                WhatsApp RSVP
-              </a>
-            ) : (
-              <button className="event-button" type="button" disabled>
-                WhatsApp RSVP
-              </button>
-            )}
-          </div>
-          <p className="event-actions__note">TBD — TO BE DISCLOSED</p>
-        </div>
       </div>
     </section>
   )
